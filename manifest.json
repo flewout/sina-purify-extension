@@ -1,0 +1,23 @@
+{
+
+  "description": "Block Unknown User or advertisement'",
+  "manifest_version": 2,
+  "name": "Block Unknown",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icons/block_unknown.svg",
+    "default_title": "Block Unknown!"
+  },
+
+  "icons": {
+    "48": "icons/block_unknown.svg"
+  },
+
+  "content_scripts": [
+    {
+        "matches": ["*://weibo.com/u/*"],
+        "js": ["purify.js"]
+    }
+  ]
+}
